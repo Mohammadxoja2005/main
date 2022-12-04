@@ -1,4 +1,4 @@
-const quote = (sequelize, DataTypes) => { 
+module.exports = (sequelize, DataTypes) => { 
   
     const Quote = sequelize.define("Quote", {
       name: {
@@ -11,8 +11,5 @@ const quote = (sequelize, DataTypes) => {
       },
     });
     return Quote;
-  }; 
-
-
-module.exports = quote
+  };
   
