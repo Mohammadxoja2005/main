@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const { Quote } = require("../models");
+const { quote } = require("../models");
 
 router.get("/", async (req,res) => {
-    const quotes = await Quote.findAll(); 
+    const quotes = await quote.findAll(); 
     res.json(quotes);
 }) 
 
 router.post("/", async (req, res) => {
     const quote = req.body; 
-    await Quote.create(quote); 
+    await quote.create(quote); 
     
     res.json(quote); 
 });
